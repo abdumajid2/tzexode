@@ -58,10 +58,11 @@ const ItemRoot = styled.div<{ disabled?: boolean; active?: boolean }>`
   margin-bottom: 6px;
   border-radius: 6px;
   background: ${(p) => (p.active ? "#e6f7ff" : "#fafafa")};
-  border: 1px solid #eee;
+  border: 1px solid ${(p) => (p.active ? "#40a9ff" : "#ddd")};
   cursor: ${(p) => (p.disabled ? "default" : "pointer")};
   opacity: ${(p) => (p.disabled ? 0.6 : 1)};
   user-select: none;
+
 `;
 
 const Footer = styled.div`
@@ -312,7 +313,7 @@ export default function MatchColumns(props: MatchColumnsProps) {
                 strokeLinecap="round"
               />
               {/* маленький кружок посередине */}
-              <circle cx={(ln.x1 + ln.x2) / 2} cy={(ln.y1 + ln.y2) / 2} r={3} fill="#0284c7" />
+              <circle  cx={(ln.x1 + ln.x2) / 2} cy={(ln.y1 + ln.y2) / 2} r={3} fill="#0284c7" />
             </g>
           ))}
         </SvgOverlay>
